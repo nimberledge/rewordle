@@ -19,7 +19,7 @@ class RewordleContainer extends React.Component {
     }
 
     render() {
-        return (<div id='WordleContainer' >
+        return (<div id='RewordleContainer' >
             <RowSelector id='RowSelect' />
             <GuessBox guessRow={ 0 } rowSelector={ {"guessRow" : 1} } game={ this.game } updateParent={ this.updateSelf }/>
             <WordleGrid id='WordleGridComponent' game={ this.game } />
