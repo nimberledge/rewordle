@@ -1,4 +1,5 @@
 import './App.css';
+import WordleGrid from './components/WordleGrid';
 
 function App() {
   return (
@@ -8,6 +9,11 @@ function App() {
           Rewordle
         </p>
       </header>
+      <body className="App-body">
+        <div id='main-container'>
+          <WordleGrid id='WordleGridComponent' />
+        </div>
+      </body>
     </div>
   );
 }

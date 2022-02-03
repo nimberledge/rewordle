@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Re-Wordle
+
+A project to share your Wordles in a new, creative way. Once you have finished your wordle, you can share your guessing pattern using Re-Wordle, and allow your friends to de-construct your guesses. Fun, right? Well I'll find out if I ever complete it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

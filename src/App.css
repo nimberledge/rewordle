@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -24,15 +25,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body {
+  background-color: #282c34;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.WordleTile {
+  width: 70px;
+  height: 70px;
+  font-size: xx-large;
+  /* background-color: green; */
+  color: white;
+}
+
+#main-container {
+  position: relative;
+  padding-left: 37%;
+  background-color: #282c34;
 }
