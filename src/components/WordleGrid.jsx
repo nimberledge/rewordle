@@ -16,7 +16,6 @@ class WordleGrid extends React.Component {
                 } else {
                     let ijState = this.props.game.states[i][j];
                     let ijText = this.props.game.texts[i][j];
-                    console.log(i, j, ijState, ijText);
                     tileRow.push(<td>
                     <WordleTile text={ ijText } row={i} col={j} state={ ijState } />
                     </td>)

@@ -16,7 +16,8 @@ class GuessBox extends React.Component {
     handleSubmit(e) {
         this.guessString = this.state.textbox_entry;
         if (this.validateGuess(this.guessString) === 0) {
-            this.props.game.processGuess(this.guessString, this.props.rowSelector.guessRow);
+            console.log("Guess box call guessRow: " + this.props.guessRow);
+            this.props.game.processGuess(this.guessString, this.props.guessRow);
             this.props.updateParent(this.props.game);
             this.setState({textbox_entry: ''});
         } else {

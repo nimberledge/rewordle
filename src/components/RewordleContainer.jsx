@@ -10,18 +10,25 @@ class RewordleContainer extends React.Component {
         this.game = props.game;
 
         this.updateSelf = this.updateSelf.bind(this);
+        this.updateGuessRow = this.updateGuessRow.bind(this);
         this.render = this.render.bind(this);
-        this.state = {plsrender: false};
+        let initGuessRow = Math.max(0, this.game.guesses.length - 2);
+        this.state = {plsrender: false, guessRow: initGuessRow};
     }
 
     updateSelf(game) {
-        this.setState({plsrender: true});
+        this.setState({plsrender: true, guessRow: this.state.guessRow});
+    }
+
+    updateGuessRow(row) {
+        this.setState({plsrender: true, guessRow: row});
+        console.log("Updated container guess row to: " + row);
     }
 
     render() {
         return (<div id='RewordleContainer' >
-            <RowSelector id='RowSelect' />
-            <GuessBox guessRow={ 0 } rowSelector={ {"guessRow" : 1} } game={ this.game } updateParent={ this.updateSelf }/>
+            <RowSelector id='RowSelect' validRows={ this.game.guesses.length } updateParent={ this.updateGuessRow }/>
+            <GuessBox guessRow={ this.state.guessRow } game={ this.game } updateParent={ this.updateSelf }/>
             <WordleGrid id='WordleGridComponent' game={ this.game } />
         </div>)
     }

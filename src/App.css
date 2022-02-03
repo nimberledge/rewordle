@@ -37,15 +37,25 @@ body {
 }
 
 #GuessBox {
-  position: relative;
-  left: 10%;
+  position: absolute;
+  left: 69%;
+  top: 30%;
+  width: 20%;
+  font-size: xx-large;
   color: white;
 }
 
-#RowSelector {
+#GuessTextBox {
   position: relative;
-  left: -60%;
-  color: white;
+  font-size: xx-large;
+  width: 60%;
+}
+
+#GuessSubmitButton {
+  position: absolute;
+  font-size: xx-large;
+  top: 110%;
+  left: 30%;
 }
 
 #RewordleContainer {
@@ -58,4 +68,18 @@ body {
 #WordleGridTable {
   position: absolute;
   top: -32%;
+}
+
+.rowSelectButton {
+  width: 70px;
+  height: 70.1px;
+  font-size: xx-large;
+  /* background-color: #282c34; */
+  color: white;
+}
+
+#RowSelector {
+  position: relative;
+  left: -10%;
+  color: white;
 }

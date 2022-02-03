@@ -7,7 +7,7 @@ function App() {
   let dummy_guesses = ["ROUSE", "STAIR", "SCARY", "SHARK", "SHARP", "SHARD"];
   // let dummy_guesses = ["NASAL", "BANAL", "ALTER"];
   let game = new RewordleGame(dummy_guesses);
-  console.log(game.states);
+  // console.log(game.states);
   return (
     <div className="App">
       <header className="App-header">
