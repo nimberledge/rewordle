@@ -1,17 +1,5 @@
 .App {
   text-align: center;
-  background-color: #282c34;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -29,16 +17,19 @@
   background-color: #282c34;
 }
 
+body {
+  background-color: #282c34;
+}
+
 .WordleTile {
   width: 70px;
   height: 70px;
   font-size: xx-large;
-  /* background-color: green; */
   color: white;
 }
 
 #main-container {
   position: relative;
-  padding-left: 37%;
+  padding-left: 38.80%;
   background-color: #282c34;
 }
