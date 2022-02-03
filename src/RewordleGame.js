@@ -8,7 +8,7 @@ class RewordleGame {
         this.guesses = [];
         this.texts = [];
         for (let i = 0; i < guesses.length; i++) {
-            this.guesses.push(guesses[i]);
+            this.guesses.push(guesses[i].toUpperCase());
             let text = [];
             for (let j = 0; j < guesses[i].length; j++) {
                 if (i < (guesses.length - 1)) {
@@ -49,7 +49,7 @@ class RewordleGame {
                     if (guess[k] === char) {
                         // Only update if it wasn't already caught
                         // Avoids overwriting greens
-                        if (state[k] === 0) {
+                        if (state[k] === 0 && state[j] !== 2) {
                             state[k] = 1;
                             break;
                         }
@@ -69,6 +69,19 @@ class RewordleGame {
 
     getTextList() {
         return this.texts;
+    }
+
+    processGuess(guessString, guessRow) {
+        let secretWord = this.guesses[guessRow];
+        guessString = guessString.toUpperCase();
+        console.log(guessString);
+        console.log(guessRow);
+        for (let i = 0; i < guessString.length; i++) {
+            if (guessString[i] === secretWord[i]) {
+                this.texts[guessRow][i] = secretWord[i];
+            }
+        }
+        console.log(this.texts);
     }
 }
 
