@@ -76,7 +76,6 @@ class RewordleGame {
     processGuess(guessString, guessRow) {
         let secretWord = this.guesses[guessRow];
         guessString = guessString.toUpperCase();
-        console.log("Process guess with guess: " + guessString + " and row: " + guessRow);
         for (let i = 0; i < guessString.length; i++) {
             if (guessString[i] === secretWord[i]) {
                 this.texts[guessRow][i] = secretWord[i];

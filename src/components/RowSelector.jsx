@@ -19,7 +19,6 @@ class RowSelector extends React.Component {
         this.setState({guessRow: i});
         this.guessRow = i;
         this.props.updateParent(this.guessRow);
-        console.log("Row selector guess row: " + this.guessRow);
     }
 
     render() {

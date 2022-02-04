@@ -30,14 +30,12 @@ class RewordleContainer extends React.Component {
 
     updateGuessRow(row) {
         this.setState({plsrender: true, guessRow: row});
-        console.log("Updated container guess row to: " + row);
     }
 
     checkComplete() {
         for (let i = 0; i < this.game.texts.length; i++) {
             for (let j = 0; j < this.game.texts[i].length; j++) {
                 if (this.game.texts[i][j] === '') {
-                    console.log("checkComplete failed at " + i + ", " + j);
                     return false;
                 }
             }
