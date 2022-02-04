@@ -7,6 +7,7 @@ class RewordleGame {
     constructor(guesses) {
         this.guesses = [];
         this.texts = [];
+        this.strikes = []
         for (let i = 0; i < guesses.length; i++) {
             this.guesses.push(guesses[i].toUpperCase());
             let text = [];
@@ -18,6 +19,7 @@ class RewordleGame {
                 }
             }
             this.texts.push(text);
+            this.strikes.push(0);
         }
         this.getStateList();
     }
@@ -78,6 +80,12 @@ class RewordleGame {
         for (let i = 0; i < guessString.length; i++) {
             if (guessString[i] === secretWord[i]) {
                 this.texts[guessRow][i] = secretWord[i];
+            }
+        }
+        // Add a strike if the word is incomplete
+        for (let i = 0; i < guessString.length; i++) {
+            if (this.texts[guessRow][i] === '') {
+                this.strikes[guessRow]++;
             }
         }
     }

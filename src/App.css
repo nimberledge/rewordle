@@ -38,7 +38,7 @@ body {
 
 #GuessBox {
   position: absolute;
-  left: 69%;
+  left: 68%;
   top: 30%;
   width: 20%;
   font-size: xx-large;
@@ -72,8 +72,8 @@ body {
 
 .rowSelectButton {
   width: 70px;
-  height: 70.1px;
-  font-size: xx-large;
+  height: 70px;
+  font-size: xxx-large;
   /* background-color: #282c34; */
   color: white;
 }
@@ -83,3 +83,29 @@ body {
   left: -10%;
   color: white;
 }
+
+#CompletedBox {
+  position: absolute;
+  left: 65%;
+  /* top: 60%; */
+  width: 20%;
+  height: 20%;
+  background-color: black;
+  border: black;
+  opacity: 100%;
+  color: white;
+  font-size: xx-large;
+}
+
+#StrikesBox {
+  position: relative;
+  left: 8%;
+  font-size: xx-large;
+  color: white;
+}
+
+/* #CompletedTextBox {
+  position: absolute;
+  left: 10%;
+  bottom: -15%;
+} */
