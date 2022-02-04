@@ -39,6 +39,10 @@ class WordleInput extends React.Component {
                 guessString += this.state.guesses[i]+',';
             }
             guessString += this.state.guesses[this.state.guesses.length-1];
+            // If they forget to submit the last word
+            if (this.state.textboxEntry.length === 5 && this.state.guesses.length < 6) {
+                guessString += ',' + this.state.textboxEntry.toUpperCase();
+            }
             let base64Val = Buffer.from(guessString).toString('base64');
             // console.log(base64Val);
             // let decodedVal = Buffer.from(base64Val, 'base64').toString('ascii');
