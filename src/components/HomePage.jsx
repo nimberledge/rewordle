@@ -43,7 +43,7 @@ class HomePage extends React.Component {
               </header>
               <body className="App-body">
                 <div id='main-container'>
-                  <RewordleContainer game={ game }/>
+                  <RewordleContainer game={ game } updateParent={ this.handleInputDone }/>
                 </div>
               </body>
             </div>

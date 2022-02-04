@@ -3,7 +3,6 @@ import WordleGrid from './WordleGrid';
 import GuessBox from './GuessBox';
 import RowSelector from './RowSelector';
 import CompletedBox from './CompletedBox';
-import StrikesBox from './StrikesBox';
 
 class RewordleContainer extends React.Component {
     game; 
@@ -18,6 +17,7 @@ class RewordleContainer extends React.Component {
         this.updateSelf = this.updateSelf.bind(this);
         this.updateGuessRow = this.updateGuessRow.bind(this);
         this.checkComplete = this.checkComplete.bind(this);
+        this.goHome = this.goHome.bind(this);
     }
 
     updateSelf(game) {
@@ -35,12 +35,16 @@ class RewordleContainer extends React.Component {
     checkComplete() {
         for (let i = 0; i < this.game.texts.length; i++) {
             for (let j = 0; j < this.game.texts[i].length; j++) {
-                if (this.game.texts[i][j] === '' || this.game.states[i][j] === 3) {
+                if (this.game.texts[i][j] === '') {
                     return false;
                 }
             }
         }
         return true;
+    }
+
+    goHome() {
+        this.props.updateParent();
     }
 
     render() {
@@ -55,13 +59,13 @@ class RewordleContainer extends React.Component {
                 <GuessBox guessRow={ this.state.guessRow } game={ this.game } updateParent={ this.updateSelf }/>
                 <WordleGrid id='WordleGridComponent' game={ this.game }/>
                 <CompletedBox strikes={ numStrikes }/>
+                <button id='goHomeAfterPlayButton' onClick = { this.goHome }> Back to home </button>
             </div>);
         }
         return (<div id='RewordleContainer' >
             <RowSelector id='RowSelect' validRows={ this.game.guesses.length } updateParent={ this.updateGuessRow } game={ this.game }/>
             <GuessBox guessRow={ this.state.guessRow } game={ this.game } updateParent={ this.updateSelf }/>
             <WordleGrid id='WordleGridComponent' game={ this.game } />
-            <StrikesBox id='StrikesBoxComponent' strikes={ this.game.strikes[this.state.guessRow]} />
         </div>);
     }
 }

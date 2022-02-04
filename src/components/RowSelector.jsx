@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const UnselectedRow = styled.button`background-color: #282c34;`;
 const SelectedRow = styled.button`background-color: #1273de;`;
-const CompletedRow = styled.button`background-color: #6aaa64;`;
-const DeadRow = styled.button`background-color: #b80000;`;
+const CompletedRow = styled.button`background-color: #13cb16;`;
+const DeadRow = styled.button`background-color: #fb5a1a;`;
 
 class RowSelector extends React.Component {
     guessRow;
@@ -46,7 +46,7 @@ class RowSelector extends React.Component {
             if (i === this.state.guessRow && gameDone === false) {
                 //   onClick={ this.updateGuessRow(i) }>
                 if (this.props.game.strikes[i] >= 3) {
-                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' disabled={ true }> 
+                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
                             { "➔" }
                             </DeadRow> </td>;    
                 } else if (completed) {
@@ -60,10 +60,10 @@ class RowSelector extends React.Component {
                 }
             } else {
                 if (this.props.game.strikes[i] >= 3) {
-                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' disabled={ true }> 
+                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
                             { this.props.game.strikes[i] }
                             </DeadRow> </td>;
-                } else if (completed) {
+                } else if (completed === true) {
                     button = <td> <CompletedRow id={ button_id } className='rowSelectButton' disabled={ true }> 
                             { this.props.game.strikes[i] }
                             </CompletedRow> </td>;

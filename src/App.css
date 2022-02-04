@@ -62,7 +62,7 @@ body {
   
   #GuessBox {
     position: absolute;
-    left: 155px;
+    left: 140px;
     top: 350px;
     width: 150px;
     font-size: medium;
@@ -94,7 +94,7 @@ body {
   #WordleGridTable {
     position: absolute;
     top: 77px;
-    left: 115px;
+    left: 100px;
     border: 1px;
     border-spacing: 3px;
   }
@@ -110,7 +110,7 @@ body {
   
   #RowSelector {
     position: absolute;
-    left: 69px;
+    left: 54px;
     top: 76px;
     color: white;
   }
@@ -122,7 +122,7 @@ body {
   
   #CompletedBox {
     position: absolute;
-    left: 180px;
+    left: 160px;
     top: 460px;
     width: 100px;
     height: 30px;
@@ -130,14 +130,21 @@ body {
     color: white;
     font-size: medium;
   }
+
+  #goHomeAfterPlayButton {
+    position: absolute;
+    left: 130px;
+    top: 530px;
+    font-size: medium;
+  }
   
-  #StrikesBox {
+  /* #StrikesBox {
     position: absolute;
     left: 165px;
     top: 460px;
     font-size: medium;
     color: white;
-  }
+  } */
   
   .ChooseButton {
     font-size: large;
@@ -361,6 +368,13 @@ body {
     top: 200px;
     font-size: xx-large;
     color: white;
+  }
+
+  #goHomeAfterPlayButton {
+    position: absolute;
+    left: 48.75%;
+    top: 480px;
+    font-size: xx-large;
   }
   
   .ChooseButton {
