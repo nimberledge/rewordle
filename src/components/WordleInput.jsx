@@ -84,6 +84,7 @@ class WordleInput extends React.Component {
                 <button id='inputSubmitAllButton' onClick={ this.handleSubmitAll }>
                     Submit Wordle    
                 </button>
+                <button id='goHomeInputButton' onClick={ this.handleDone }> Back to home </button>
             </div>);
         } else if (this.state.guesses.length === 6) {
             return (<div id='WordleInputComponent'>
@@ -92,6 +93,7 @@ class WordleInput extends React.Component {
                 <button id='inputSubmitAllButton' onClick={ this.handleSubmitAll }>
                     Submit Wordle    
                 </button>
+                <button id='goHomeInputButton' onClick={ this.handleDone }> Back to home </button>
             </div>);
         }
         
@@ -104,6 +106,7 @@ class WordleInput extends React.Component {
                     <button id='inputSubmitButton' onClick={ this.handleSubmit }>
                         Submit word
                     </button>
+                    <button id='goHomeInputButton' onClick={ this.handleDone }> Back to home </button>
                 </div>);
     }
 }

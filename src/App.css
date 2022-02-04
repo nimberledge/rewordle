@@ -214,6 +214,14 @@ body {
     left: 0px;
     width: 400px;
   }
+
+  #goHomeInputButton {
+    position: absolute;
+    left: 40px;
+    top: 250px;
+    width: 100px;
+    font-size: large;
+  }
   
   #WordleLinkComponent {
     font-size: x-large;
@@ -441,6 +449,19 @@ body {
   #inputSubmitAllButton {
     position: absolute;
     left: 50%;
+    top: 130px;
+    font-size: medium;
+  }
+
+  /* #goToHomePageButton {
+    position: absolute;
+    left: 42.5%;
+    top: 190px;
+    font-size: medium;
+  } */
+  #goHomeInputButton {
+    position: absolute;
+    left: 67%;
     top: 130px;
     font-size: medium;
   }
