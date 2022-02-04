@@ -74,6 +74,9 @@ class RewordleGame {
     }
 
     processGuess(guessString, guessRow) {
+        if (this.strikes[guessRow] >= 3) {
+            return;
+        }
         let secretWord = this.guesses[guessRow];
         guessString = guessString.toUpperCase();
         for (let i = 0; i < guessString.length; i++) {
@@ -86,6 +89,29 @@ class RewordleGame {
             if (this.texts[guessRow][i] === '') {
                 this.strikes[guessRow]++;
                 break;
+            }
+        }
+        // Check if the game is done
+        let done = true;
+        for (let i = 0; i < this.guesses.length; i++) {
+            if (this.strikes[i] >= 3) {
+                continue;
+            }
+            for (let j = 0; j < this.guesses[i].length; j++) {
+                if (this.texts[i][j] === '') {
+                    done = false;
+                    break;
+                }
+            }
+        }
+        if (done === true) {
+            for (let i = 0; i < this.guesses.length; i++) {
+                for (let j = 0; j < this.guesses[i].length; j++) {
+                    if (this.texts[i][j] === '') {
+                        this.texts[i][j] = this.guesses[i][j];
+                        this.states[i][j] = 3;
+                    }
+                }
             }
         }
     }

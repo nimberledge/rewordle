@@ -35,7 +35,7 @@ class RewordleContainer extends React.Component {
     checkComplete() {
         for (let i = 0; i < this.game.texts.length; i++) {
             for (let j = 0; j < this.game.texts[i].length; j++) {
-                if (this.game.texts[i][j] === '') {
+                if (this.game.texts[i][j] === '' || this.game.states[i][j] === 3) {
                     return false;
                 }
             }

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const GreyTile = styled.button`background-color: #808080;`;
 const YellowTile = styled.button`background-color: #c9b458;`;
 const GreenTile = styled.button`background-color: #6aaa64;`;
+const RedTile = styled.button`background-color: #b80000;`;
 
 class WordleTile extends React.Component {
     render() {
@@ -27,6 +28,10 @@ class WordleTile extends React.Component {
             return <GreenTile id={ buttonId } disabled={ true } className='WordleTile' >
                 { this.props.text }
             </GreenTile>;
+        } else if (this.props.state === 3) {
+            return <RedTile id={ buttonId } disabled={ true } className='WordleTile' >
+                { this.props.text }
+            </RedTile>;
         } else {
             return <GreyTile id={ buttonId } disabled={ true } className='WordleTile' >
                 { this.props.text }
