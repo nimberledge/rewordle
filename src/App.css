@@ -140,85 +140,111 @@ body {
   }
   
   .ChooseButton {
-    font-size: xx-large;
-    height: 15%;
-    width: 10%;
+    font-size: large;
+    height: 100px;
+    width: 100px;
   }
   
   #InputChoiceButton {
-    position: relative;
-    left: -2%;
-    height: 15%;
-  }
-  
-  #pastGuessTable {
     position: absolute;
-    left: 46.25%;
-    top: 210px;
-    font-size: large;
-    color: white;
+    left: 100px;
+    top: 20px;
+  }
+
+  #PlayChoiceButton {
+    position: absolute;
+    left: 220px;
+    top: 20px;
   }
   
+  /* WordleInput components */
+  #WordleInputComponent {
+    position: absolute;
+    left: 10px;
+    color: white;
+    font-size: large;
+  }
   #inputBox {
     position: absolute;
-    left: 43.5%;
+    left: -2px;
     top: 85px;
     font-size: large;
   }
   
   #inputSubmitButton {
     position: absolute;
-    left: 47%;
+    left: 40px;
     top: 130px;
     font-size: large;
   }
   
   #inputPrompt {
     position: absolute;
-    left: 47%;
+    left: 0px;
     top: 30px;
+    width: 150px;
     color: white;
   }
   
   #inputSubmitAllButton {
     position: absolute;
-    left: 46.5%;
-    top: 170px;
+    left: 40px;
+    top: 190px;
     font-size: large;
   }
-  
-  #WordleInputComponent {
-    color: white;
+
+  #pastGuessTable {
+    position: absolute;
+    left: 230px;
+    width: 175px;
+    top: 60px;
     font-size: large;
+    color: whitesmoke;
   }
   
   #enterGuessBox {
     position: absolute;
-    left: 43%;}
+    left: 0px;
+    width: 400px;
+  }
   
   #WordleLinkComponent {
     font-size: x-large;
     color: white;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 10px;
   }
   
+  /* Other stuff */
   #linkInputBox {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 250px;
     font-size: x-large;
   }
   
   #linkInputText {
+    position: absolute;
+    left: 20px;
     font-size: x-large;
     color: white;
   }
   
   #openLinkButton {
+    position: absolute;
     font-size: x-large;
+    left: 310px;
+    top: 70px;
   }
   
   #otherGoHomeButton {
     position: absolute;
-    top: 120px;
-    left: 46.5%;
-    font-size: large;
+    top: 180px;
+    left: 100px;
+    font-size: x-large;
   }
 }
 
@@ -240,10 +266,12 @@ body {
   
   .App-body {
     background-color: #282c34;
+    height: auto;
   }
   
   body {
     background-color: #282c34;
+    height: 1000px;
   }
   
   .WordleTile {
@@ -337,83 +365,111 @@ body {
   
   .ChooseButton {
     font-size: xx-large;
-    height: 15%;
-    width: 10%;
   }
   
   #InputChoiceButton {
-    position: relative;
-    left: -2%;
-    height: 15%;
+    position: absolute;
+    left: 39%;
+    top: 5%;
+    height: fit-content;
+    width: 10%;
+  }
+
+  #PlayChoiceButton {
+    position: absolute;
+    left: 50%;
+    width: 9%;
+    top: 5%;
+    height: fit-content;
   }
   
+  /* Wordle Input Components */
+  #WordleInputComponent {
+    color: white;
+    font-size: x-large;
+    width: 50%;
+    height: 100%;
+    left: 25%;
+  }
+
   #pastGuessTable {
     position: absolute;
-    left: 46.25%;
-    top: 210px;
-    font-size: large;
+    left: 38%;
+    top: 180px;
+    font-size: x-large;
+    width: fit-content;
     color: white;
   }
   
   #inputBox {
     position: absolute;
-    left: 43.5%;
+    left: 35%;
     top: 85px;
     font-size: large;
   }
   
   #inputSubmitButton {
     position: absolute;
-    left: 47%;
+    left: 35%;
     top: 130px;
-    font-size: large;
+    font-size: medium;
   }
   
   #inputPrompt {
     position: absolute;
-    left: 47%;
-    top: 30px;
+    left: 40%;
+    width: 20%;
+    top: 0px;
     color: white;
+    font-size: x-large;
   }
   
   #inputSubmitAllButton {
     position: absolute;
-    left: 46.5%;
-    top: 170px;
-    font-size: large;
-  }
-  
-  #WordleInputComponent {
-    color: white;
-    font-size: large;
+    left: 50%;
+    top: 130px;
+    font-size: medium;
   }
   
   #enterGuessBox {
     position: absolute;
-    left: 43%;}
+    left: 30%;
+    top: -75px;
+    font-size: x-large;
+  }
   
   #WordleLinkComponent {
-    font-size: x-large;
+    position: absolute;
+    left: 30%;
+    top: -70px;
+    width: 35%;
+    font-size: xx-large;
     color: white;
   }
   
   #linkInputBox {
+    position: absolute;
+    left: 43%;
     font-size: x-large;
   }
   
   #linkInputText {
+    position: absolute;
+    left: 43%;
     font-size: x-large;
     color: white;
   }
   
   #openLinkButton {
+    position: absolute;
+    left: 57%;
     font-size: x-large;
   }
   
   #otherGoHomeButton {
     position: absolute;
-    top: 120px;
+    top: 140px;
     left: 46.5%;
-    font-size: large;
+    font-size: x-large;
   }
 }
