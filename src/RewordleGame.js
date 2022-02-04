@@ -85,6 +85,7 @@ class RewordleGame {
         for (let i = 0; i < guessString.length; i++) {
             if (this.texts[guessRow][i] === '') {
                 this.strikes[guessRow]++;
+                break;
             }
         }
     }
