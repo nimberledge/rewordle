@@ -109,3 +109,49 @@ body {
   left: 10%;
   bottom: -15%;
 } */
+
+.ChooseButton {
+  font-size: xx-large;
+  height: 15%;
+  width: 10%;
+}
+
+#InputChoiceButton {
+  position: relative;
+  left: -2%;
+  height: 15%;
+}
+
+#pastGuessTable {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  font-size: large;
+  color: white;
+}
+
+#inputBox {
+  position: relative;
+  top: 10%;
+}
+
+#inputSubmitButton {
+  position: relative;
+  top: 10%;
+}
+
+#inputPrompt {
+  position: relative;
+  top: 10%;
+  color: white;
+}
+
+#inputSubmitAllButton {
+  position: absolute;
+  top: 120%;
+  left: 45%;
+  height: 30%;
+  width: 10%;
+  font-size: medium;
+
+}
