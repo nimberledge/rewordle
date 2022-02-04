@@ -86,8 +86,8 @@ body {
 
 #CompletedBox {
   position: absolute;
-  left: 65%;
-  /* top: 60%; */
+  left: 64%;
+  top: 250px;
   width: 20%;
   height: 20%;
   background-color: black;
@@ -98,8 +98,9 @@ body {
 }
 
 #StrikesBox {
-  position: relative;
-  left: 8%;
+  position: absolute;
+  left: 72%;
+  top: 200px;
   font-size: xx-large;
   color: white;
 }

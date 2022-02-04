@@ -39,9 +39,9 @@ class WordleInput extends React.Component {
             }
             guessString += this.state.guesses[this.state.guesses.length-1];
             let base64Val = Buffer.from(guessString).toString('base64');
-            console.log(base64Val);
+            // console.log(base64Val);
             let decodedVal = Buffer.from(base64Val, 'base64').toString('ascii');
-            console.log(decodedVal);
+            // console.log(decodedVal);
             let linkStr = '/' + base64Val;
             this.setState({guesses: this.state.guesses, textboxEntry: this.state.textboxEntry, submitted: true, link: linkStr});
         }
