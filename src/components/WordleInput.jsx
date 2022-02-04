@@ -8,6 +8,7 @@ class WordleInput extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmitAll = this.handleSubmitAll.bind(this);
+        this.handleDone = this.handleDone.bind(this);
     }
 
     handleChange(e) {
@@ -40,27 +41,35 @@ class WordleInput extends React.Component {
             guessString += this.state.guesses[this.state.guesses.length-1];
             let base64Val = Buffer.from(guessString).toString('base64');
             // console.log(base64Val);
-            let decodedVal = Buffer.from(base64Val, 'base64').toString('ascii');
+            // let decodedVal = Buffer.from(base64Val, 'base64').toString('ascii');
             // console.log(decodedVal);
-            let linkStr = '/' + base64Val;
+            let linkStr = base64Val;
             this.setState({guesses: this.state.guesses, textboxEntry: this.state.textboxEntry, submitted: true, link: linkStr});
         }
     }
 
+    handleDone() {
+        this.props.updateParent();
+    }
+
     render() {
+        // If submitted
         if (this.state.submitted === true) {
-            return (<div id='WordleInputComponent'>
-            <p>Here's your link: {this.state.link} </p>
+            return (<div id='WordleLinkComponent'>
+            <p id='RewordleCodeComponent'>Here's your rewordle code: {this.state.link} </p>
+            <button id='goToHomePageButton' onClick={ this.handleDone }> Back to home </button>
             </div>);
         }
+        
         let pastGuessTable = [];
         for (let i = 0; i < this.state.guesses.length; i++) {
-            let tableEntry = <tr> <td> Guess # {i+1}: {this.state.guesses[i]} </td> </tr>;
+            let tableEntry = <tr> <td> Guess #{i+1}: {this.state.guesses[i]} </td> </tr>;
             pastGuessTable.push(tableEntry);
         }
-        if (this.state.guesses.length >= 2) {
+        
+        if (this.state.guesses.length >= 2 && this.state.guesses.length < 6) {
             return (<div id='WordleInputComponent'>
-                <p> Enter your guesses on today's Wordle </p>
+                <p id='enterGuessBox'> Enter your guesses on today's Wordle </p>
                 <table id='pastGuessTable'> { pastGuessTable } </table>
                 <p id='inputPrompt'> Enter guess # {this.state.guesses.length+1}: </p>
                 <input id='inputBox' type='text' 
@@ -72,17 +81,26 @@ class WordleInput extends React.Component {
                     Submit Wordle    
                 </button>
             </div>);
-        }
-        return (<div id='WordleInputComponent'>
-            <p> Enter your guesses on today's Wordle </p>
+        } else if (this.state.guesses.length === 6) {
+            return (<div id='WordleInputComponent'>
+                <p> Enter your guesses on today's Wordle </p>
                 <table id='pastGuessTable'> { pastGuessTable } </table>
-                <p> Enter guess # {this.state.guesses.length+1}: </p>
-                <input id='inputBox' type='text' 
-                value={ this.state.textboxEntry } onChange={ this.handleChange } />
-                <button id='inputSubmitButton' onClick={ this.handleSubmit }>
-                    Submit word
+                <button id='inputSubmitAllButton' onClick={ this.handleSubmitAll }>
+                    Submit Wordle    
                 </button>
-        </div>);
+            </div>);
+        }
+        
+        return (<div id='WordleInputComponent'>
+                    <p> Enter your guesses on today's Wordle </p>
+                    <table id='pastGuessTable'> { pastGuessTable } </table>
+                    <p> Enter guess # {this.state.guesses.length+1}: </p>
+                    <input id='inputBox' type='text' 
+                    value={ this.state.textboxEntry } onChange={ this.handleChange } />
+                    <button id='inputSubmitButton' onClick={ this.handleSubmit }>
+                        Submit word
+                    </button>
+                </div>);
     }
 }
 

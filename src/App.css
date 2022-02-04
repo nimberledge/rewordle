@@ -38,7 +38,7 @@ body {
 
 #GuessBox {
   position: absolute;
-  left: 68%;
+  left: 65%;
   top: 30%;
   width: 20%;
   font-size: xx-large;
@@ -68,6 +68,7 @@ body {
 #WordleGridTable {
   position: absolute;
   top: -32%;
+  left: 45%;
 }
 
 .rowSelectButton {
@@ -80,7 +81,7 @@ body {
 
 #RowSelector {
   position: relative;
-  left: -10%;
+  left: -6%;
   color: white;
 }
 
@@ -99,7 +100,7 @@ body {
 
 #StrikesBox {
   position: absolute;
-  left: 72%;
+  left: 67.5%;
   top: 200px;
   font-size: xx-large;
   color: white;
@@ -125,34 +126,70 @@ body {
 
 #pastGuessTable {
   position: absolute;
-  left: 30%;
-  top: 15%;
+  left: 46.25%;
+  top: 210px;
   font-size: large;
   color: white;
 }
 
 #inputBox {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  left: 43.5%;
+  top: 85px;
+  font-size: large;
 }
 
 #inputSubmitButton {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  left: 47%;
+  top: 130px;
+  font-size: large;
 }
 
 #inputPrompt {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  left: 47%;
+  top: 30px;
   color: white;
 }
 
 #inputSubmitAllButton {
   position: absolute;
-  top: 120%;
-  left: 45%;
-  height: 30%;
-  width: 10%;
-  font-size: medium;
+  left: 46.5%;
+  top: 170px;
+  font-size: large;
+}
 
+#WordleInputComponent {
+  color: white;
+  font-size: large;
+}
+
+#enterGuessBox {
+  position: absolute;
+  left: 43%;}
+
+#WordleLinkComponent {
+  font-size: x-large;
+  color: white;
+}
+
+#linkInputBox {
+  font-size: x-large;
+}
+
+#linkInputText {
+  font-size: x-large;
+  color: white;
+}
+
+#openLinkButton {
+  font-size: x-large;
+}
+
+#otherGoHomeButton {
+  position: absolute;
+  top: 120px;
+  left: 46.5%;
+  font-size: large;
 }
