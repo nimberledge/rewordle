@@ -1,5 +1,6 @@
 import React from 'react';
 import { Buffer } from 'buffer';
+import CopyToCliboard from 'react-copy-to-clipboard';
 
 class WordleInput extends React.Component {
     constructor(props) {
@@ -61,6 +62,10 @@ class WordleInput extends React.Component {
         if (this.state.submitted === true) {
             return (<div id='WordleLinkComponent'>
             <p id='RewordleCodeComponent'>Here's your rewordle code: {this.state.link} </p>
+
+            <CopyToCliboard id='copyClipboardButton' text={ this.state.link }>
+            <button> Copy to clipboard </button>
+            </CopyToCliboard>
             <button id='goToHomePageButton' onClick={ this.handleDone }> Back to home </button>
             </div>);
         }

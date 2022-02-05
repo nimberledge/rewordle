@@ -231,7 +231,19 @@ body {
     position: absolute;
     left: 10px;
   }
+
+  /* Might need work in future */
+  #copyClipboardButton {
+    position: absolute;
+    top: 130px;
+    font-size: medium;
+  }
   
+  #goToHomePageButton {
+    position: absolute;
+    top: 180px;
+    font-size: medium;
+  }
   /* Other stuff */
   #linkInputBox {
     position: absolute;
@@ -461,7 +473,7 @@ body {
   } */
   #goHomeInputButton {
     position: absolute;
-    left: 67%;
+    left: 75%;
     top: 130px;
     font-size: medium;
   }
@@ -475,11 +487,21 @@ body {
   
   #WordleLinkComponent {
     position: absolute;
-    left: 30%;
+    left: 31%;
     top: -70px;
     width: 35%;
     font-size: xx-large;
     color: white;
+  }
+
+  #copyClipboardButton {
+    position: absolute;
+    left: 35%;
+  }
+
+  #goToHomePageButton {
+    position: absolute;
+    left: 60%;
   }
   
   #linkInputBox {
