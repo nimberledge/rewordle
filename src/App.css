@@ -478,8 +478,9 @@ body {
   
   #enterGuessBox {
     position: absolute;
-    left: 14vw;
+    left: 10vw;
     top: -10vh;
+    width: 30vw;
     font-size: xx-large;
   }
   

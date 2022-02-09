@@ -78,7 +78,7 @@ class WordleInput extends React.Component {
         
         if (this.state.guesses.length >= 2 && this.state.guesses.length < 6) {
             return (<div id='WordleInputComponent'>
-                <p id='enterGuessBox'> Enter your guesses on today's Wordle </p>
+                <p id='enterGuessBox'> Enter your guesses on today's Wordle (solution word last) </p>
                 <table id='pastGuessTable'> { pastGuessTable } </table>
                 <p id='inputPrompt'> Enter guess # {this.state.guesses.length+1}: </p>
                 <input id='inputBox' type='text' 
@@ -93,7 +93,7 @@ class WordleInput extends React.Component {
             </div>);
         } else if (this.state.guesses.length === 6) {
             return (<div id='WordleInputComponent'>
-                <p id='enterGuessBox'> Enter your guesses on today's Wordle </p>
+                <p id='enterGuessBox'> Enter your guesses on today's Wordle (solution word last) </p>
                 <table id='pastGuessTable'> { pastGuessTable } </table>
                 <button id='inputSubmitAllButton' onClick={ this.handleSubmitAll }>
                     Submit Wordle    
@@ -103,7 +103,7 @@ class WordleInput extends React.Component {
         }
         
         return (<div id='WordleInputComponent'>
-                    <p id='enterGuessBox'> Enter your guesses on today's Wordle </p>
+                    <p id='enterGuessBox'> Enter your guesses on today's Wordle (solution word last) </p>
                     <table id='pastGuessTable'> { pastGuessTable } </table>
                     <p id='inputPrompt'> Enter guess # {this.state.guesses.length + 1}: </p>
                     <input id='inputBox' type='text' 
