@@ -45,21 +45,38 @@ class RowSelector extends React.Component {
             }
             if (i === this.state.guessRow && gameDone === false) {
                 //   onClick={ this.updateGuessRow(i) }>
-                if (this.props.game.strikes[i] >= 3) {
+                if (this.props.game.strikes[i] >= 5) {
                     button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
                             { "➔" }
                             </DeadRow> </td>;    
                 } else if (completed) {
-                    button = <td> <CompletedRow id={ button_id } className='rowSelectButton' disabled={ true }> 
-                            { "➔" }
-                            </CompletedRow> </td>;    
+                    // Change this.state.guessRow
+                    let candidateRow = Math.max(i-1, 0);
+                    while (true) {
+                        let candComplete = true;
+                        for (let j = 0; j < this.props.game.texts[candidateRow].length; j++) {
+                            if (this.props.game.texts[candidateRow][j] === '') {
+                                candComplete = false;
+                                break;
+                            }
+                        }
+                        if (candComplete === false) {
+                            this.updateGuessRow(candidateRow);
+                            break;
+                        } else {
+                            candidateRow++;
+                        }
+                        if (candidateRow >= this.props.game.texts.length) {
+                            break;
+                        }
+                    }    
                 } else {
                     button = <td> <SelectedRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i) }> 
                             { "➔" }
                             </SelectedRow> </td>;
                 }
             } else {
-                if (this.props.game.strikes[i] >= 3) {
+                if (this.props.game.strikes[i] >= 5) {
                     button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
                             { this.props.game.strikes[i] }
                             </DeadRow> </td>;

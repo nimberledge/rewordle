@@ -77,6 +77,16 @@ class RewordleGame {
         // if (this.strikes[guessRow] >= 3) {
         //     return;
         // }
+        let alreadyCompleted = true;
+        for (let i = 0; i < this.guesses[guessRow].length; i++) {
+            if (this.texts[guessRow][i] === '') {
+                alreadyCompleted = false;
+                break;
+            }
+        }
+        if (alreadyCompleted === true) {
+            return;
+        }
         let secretWord = this.guesses[guessRow];
         guessString = guessString.toUpperCase();
         for (let i = 0; i < guessString.length; i++) {
