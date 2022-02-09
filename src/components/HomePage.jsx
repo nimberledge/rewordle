@@ -35,7 +35,7 @@ class HomePage extends React.Component {
           console.log("guesses: " + guesses);
           let game = new RewordleGame(guesses);
           return (
-            <div className="App">
+            <div className="AppScreen">
               <header className="App-header">
                 <p>
                   RE-WORDLE
@@ -50,7 +50,7 @@ class HomePage extends React.Component {
           );
         } else if (this.state.mode === 'input') {
             return (
-              <div className="App">
+              <div className="AppScreen">
                 <header className="App-header">
                   <p>
                     RE-WORDLE
@@ -65,7 +65,7 @@ class HomePage extends React.Component {
             );
         } else if (this.state.mode === 'choose') {
           return (
-            <div className="App">
+            <div className="AppScreen">
               <header className="App-header">
                 <p>
                   RE-WORDLE
@@ -84,7 +84,7 @@ class HomePage extends React.Component {
             </div>
           );
         } else if (this.state.mode === 'getLink') {
-          return (<div className="App">
+          return (<div className="AppScreen">
               <header className="App-header">
                 <p>
                   RE-WORDLE

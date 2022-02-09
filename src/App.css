@@ -278,32 +278,38 @@ body {
 @media (min-width:961px) {
   .App {
     text-align: center;
+    height: 100vh;
   }
   
   .App-header {
     background-color: #282c34;
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
+    /* min-height: 10vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 10vh;
     align-items: center;
     justify-content: center;
-    font-size: xx-large;
+    font-size: xxx-large;
     color: white;
   }
   
   .App-body {
     background-color: #282c34;
-    height: auto;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 15vh;
+    align-items: center;
   }
   
   body {
     background-color: #282c34;
-    height: 1000px;
+    height: 100vh;
   }
   
   .WordleTile {
-    width: 70px;
-    height: 70px;
+    width: 7vh;
+    height: 7vh;
     font-size: xx-large;
     padding-left: 3px;
     color: white;
@@ -313,87 +319,83 @@ body {
     position: relative;
     padding-left: 0%;
     background-color: #282c34;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   
   #GuessBox {
     position: absolute;
-    left: 65%;
-    top: 30%;
-    width: 20%;
+    left: 59vw;
+    top: -10vh;
+    width: 15vw;
     font-size: xx-large;
     color: white;
   }
   
   #GuessTextBox {
-    position: relative;
+    position: absolute;
     font-size: xx-large;
-    width: 60%;
-    top: -5%;
+    width: 10vw;
+    top: 10vh;
+    left: 1vw;
   }
   
   #GuessSubmitButton {
     position: absolute;
     font-size: xx-large;
-    top: 110%;
-    left: 30%;
+    top: 17vh;
+    left: 1vw;
   }
   
   #RewordleContainer {
     position: absolute;
-    width: 50%;
-    height: 50%;
-    padding-left: 38.8%;
+    width: 100vw;
+    height: 100vh;
   }
   
   #WordleGridTable {
     position: absolute;
-    top: -32%;
-    left: 45%;
+    top: -10vh;
+    left: 41vw;
   }
   
   .rowSelectButton {
-    width: 70px;
-    height: 70px;
+    width: 7vh;
+    height: 7vh;
     font-size: xxx-large;
-    /* background-color: #282c34; */
     padding-left: 3px;
     color: white;
   }
   
   #RowSelector {
-    position: relative;
-    left: -6%;
-    top: -10%;
+    position: absolute;
+    left: 37vw;
+    top: -10vh;
     color: white;
   }
   
   #CompletedBox {
     position: absolute;
-    left: 64%;
-    top: 250px;
-    width: 20%;
-    height: 20%;
-    background-color: black;
-    border: black;
-    opacity: 100%;
+    left: 55vw;
+    top: 10vh;
+    width: 20vw;
+    height: 20vh;
     color: white;
     font-size: xx-large;
   }
   
-  #StrikesBox {
+  /* #StrikesBox {
     position: absolute;
     left: 67.5%;
     top: 200px;
     font-size: xx-large;
     color: white;
-  }
+  } */
 
   #goHomeAfterPlayButton {
     position: absolute;
-    left: 48.75%;
-    top: 480px;
+    left: 60vw;
+    top: 23.5vh;
     font-size: xx-large;
   }
   
@@ -403,17 +405,17 @@ body {
   
   #InputChoiceButton {
     position: absolute;
-    left: 39%;
-    top: 5%;
+    left: 39.5vw;
+    top: -5vh;
     height: fit-content;
-    width: 10%;
+    width: 10vw;
   }
 
   #PlayChoiceButton {
     position: absolute;
-    left: 50%;
-    width: 9%;
-    top: 5%;
+    left: 50.5vw;
+    width: 9vw;
+    top: -5vh;
     height: fit-content;
   }
   
@@ -421,112 +423,116 @@ body {
   #WordleInputComponent {
     color: white;
     font-size: x-large;
-    width: 50%;
-    height: 100%;
-    left: 25%;
+    width: 50vw;
+    height: 100vh;
+    left: 25vw;
+    top: -5vh;
   }
 
   #pastGuessTable {
     position: absolute;
-    left: 38%;
-    top: 180px;
-    font-size: x-large;
+    left: 14vw;
+    top: 17vh;
+    font-size: xx-large;
     width: fit-content;
     color: white;
   }
   
   #inputBox {
     position: absolute;
-    left: 35%;
-    top: 85px;
-    font-size: large;
+    left: 14vw;
+    top: 8vh;
+    width: 19vw;
+    font-size: x-large;
   }
   
   #inputSubmitButton {
     position: absolute;
-    left: 35%;
-    top: 130px;
-    font-size: medium;
+    left: 14vw;
+    top: 12.5vh;
+    font-size: x-large;
+  }
+
+  #inputSubmitAllButton {
+    position: absolute;
+    left: 49.5vh;
+    top: 12.5vh;
+    font-size: x-large;
   }
   
   #inputPrompt {
     position: absolute;
-    left: 40%;
-    width: 20%;
-    top: 0px;
+    left: 13.5vw;
+    width: 20vw;
+    top: -1vh;
     color: white;
-    font-size: x-large;
-  }
-  
-  #inputSubmitAllButton {
-    position: absolute;
-    left: 50%;
-    top: 130px;
-    font-size: medium;
+    font-size: xx-large;
   }
 
-  /* #goToHomePageButton {
-    position: absolute;
-    left: 42.5%;
-    top: 190px;
-    font-size: medium;
-  } */
   #goHomeInputButton {
     position: absolute;
-    left: 75%;
-    top: 130px;
-    font-size: medium;
+    left: 37vw;
+    top: 7.5vh;
+    font-size: large;
   }
   
   #enterGuessBox {
     position: absolute;
-    left: 30%;
-    top: -75px;
-    font-size: x-large;
+    left: 14vw;
+    top: -10vh;
+    font-size: xx-large;
   }
   
   #WordleLinkComponent {
     position: absolute;
-    left: 31%;
-    top: -70px;
-    width: 35%;
+    left: 31vw;
+    top: -10vh;
+    width: 35vw;
     font-size: xx-large;
     color: white;
   }
 
   #copyClipboardButton {
     position: absolute;
-    left: 35%;
+    left: 7vw;
+    top: 16vh;
+    font-size: x-large;
   }
 
   #goToHomePageButton {
     position: absolute;
-    left: 60%;
+    left: 20vw;
+    top: 16vh;
+    font-size: x-large;
   }
   
   #linkInputBox {
     position: absolute;
-    left: 43%;
-    font-size: x-large;
+    left: 39.5vw;
+    top: -5vh;
+    width: 20vw;
+    font-size: xx-large;
   }
   
   #linkInputText {
     position: absolute;
-    left: 43%;
-    font-size: x-large;
+    left: 41vw;
+    top: -15vh;
+    font-size: xx-large;
     color: white;
   }
   
   #openLinkButton {
     position: absolute;
-    left: 57%;
-    font-size: x-large;
+    left: 61vw;
+    top: -5vh;
+    font-size: xx-large;
   }
   
   #otherGoHomeButton {
     position: absolute;
-    top: 140px;
-    left: 46.5%;
-    font-size: x-large;
+    top: 2.5vh;
+    left: 44vw;
+    font-size: xx-large;
   }
 }

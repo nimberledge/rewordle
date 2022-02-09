@@ -6,11 +6,7 @@ class App extends React.Component {
   render() {
       return (
         <div className="App">
-          <body className="App-body">
-            <div id='main-container'>
-              <HomePage mode='choose' />
-            </div>
-          </body>
+          <HomePage mode='choose' />
         </div>
       );
     }
