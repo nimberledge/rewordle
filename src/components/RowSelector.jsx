@@ -45,11 +45,7 @@ class RowSelector extends React.Component {
             }
             if (i === this.state.guessRow && gameDone === false) {
                 //   onClick={ this.updateGuessRow(i) }>
-                if (this.props.game.strikes[i] >= 5) {
-                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
-                            { "➔" }
-                            </DeadRow> </td>;    
-                } else if (completed) {
+                if (completed) {
                     // Change this.state.guessRow
                     let candidateRow = Math.max(i-1, 0);
                     while (true) {
@@ -77,9 +73,15 @@ class RowSelector extends React.Component {
                 }
             } else {
                 if (this.props.game.strikes[i] >= 5) {
-                    button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
+                    if (completed === false) {
+                        button = <td> <DeadRow id={ button_id } className='rowSelectButton' onClick={ () => this.updateGuessRow(i)}> 
+                            { this.props.game.strikes[i] }
+                            </DeadRow> </td>;    
+                    } else {
+                        button = <td> <DeadRow id={ button_id } className='rowSelectButton' disabled={ true }> 
                             { this.props.game.strikes[i] }
                             </DeadRow> </td>;
+                    }
                 } else if (completed === true) {
                     button = <td> <CompletedRow id={ button_id } className='rowSelectButton' disabled={ true }> 
                             { this.props.game.strikes[i] }
