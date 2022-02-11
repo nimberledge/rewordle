@@ -22,14 +22,18 @@ body {
 } */
 
 @media (min-width: 320px) {
+  /* Typical iPhone reso: 414 x 900ish*/
+  .App {
+    text-align: center;
+    height: 100vh;
+  }
+
   .App-header {
     background-color: #282c34;
-    min-height: 30px;
-    display: flex;
-    /* flex-direction: column; */
+    height: 12vh;
     align-items: center;
     justify-content: center;
-    font-size: xx-large;
+    font-size: 5vh;
     color: white;
     z-index: +2;
   }
@@ -39,21 +43,62 @@ body {
   }
 
   .App-body {
-    top: 0px;
+    top: 0vh;
     background-color: #282c34;
   }
   
   .WordleTile {
-    width: 40px;
-    height: 40px;
-    font-size: large;
+    width: 12vw;
+    height: 12vw;
+    font-size: 7vw;
     color: white;
-    padding-left: 13px;
+    /* text-align: justify; */
+    padding-left: 3.5vw;
+  }
+
+  .rowSelectButton {
+    width: 12vw;
+    height: 12vw;
+    font-size: 7vw;
+    padding-left: 3.5vw;
+    /* justify-content: left; */
+    /* text-align: left; */
+    /* background-color: #282c34; */
+    color: white;
+  }
+  
+  /* #RowSelector {
+    position: absolute;
+    left: 10vw;
+    top: 7vh;
+    color: white;
+    border-spacing: 0vh;
+  } */
+
+  #RowSelectorButtonTable {
+    position: absolute;
+    left: 8.5vw;
+    top: 7vh;
+    color: white;
+    border-spacing: 0vh;
+  }
+
+  /* #RowSelectorButtonTable {
+    /* border: 1px; */
+    /* border-spacing: 3px; */
+    /* border-spacing: 1vh; */
+  /* } */
+
+  #WordleGridTable {
+    position: absolute;
+    top: 7vh;
+    left: 23vw;
+    border-spacing: 0vh;
   }
   
   #main-container {
     position: absolute;
-    top: 70px;
+    top: 10vh;
     background-color: #282c34;
     width: 100%;
     height: 100%;
@@ -62,80 +107,49 @@ body {
   
   #GuessBox {
     position: absolute;
-    left: 140px;
-    top: 350px;
-    width: 150px;
-    font-size: medium;
+    left: 33vw;
+    top: 50vh;
+    width: 40vw;
+    font-size: 3vh;
     color: white;
   }
   
   #GuessTextBox {
     position: absolute;
-    font-size: medium;
-    width: 130px;
-    left: -8px;
-    top: 40px;
+    font-size: 3vh;
+    width: 35vw;
+    left: -1vw;
+    top: 7vh;
   }
   
   #GuessSubmitButton {
     position: absolute;
-    font-size: medium;
-    top: 80px;
-    left: 23px;
+    font-size: 3vh;
+    top: 14vh;
+    left: 6vw;
   }
   
   #RewordleContainer {
     position: absolute;
-    width: 300px;
-    height: 80%;
-    padding-left: 38.8%;
-  }
-  
-  #WordleGridTable {
-    position: absolute;
-    top: 77px;
-    left: 100px;
-    border: 1px;
-    border-spacing: 3px;
-  }
-  
-  .rowSelectButton {
-    width: 40px;
-    height: 40px;
-    font-size: large;
-    padding-left: 13.5px;
-    /* background-color: #282c34; */
-    color: white;
-  }
-  
-  #RowSelector {
-    position: absolute;
-    left: 54px;
-    top: 76px;
-    color: white;
-  }
-
-  #RowSelectorButtonTable {
-    /* border: 1px; */
-    border-spacing: 3px;
+    width: 100vw;
+    height: 100vh;
+    /* padding-left: 38.8%; */
   }
   
   #CompletedBox {
     position: absolute;
-    left: 160px;
-    top: 460px;
-    width: 100px;
-    height: 30px;
-    opacity: 100%;
+    left: 32vw;
+    top: 69vh;
+    width: 40vw;
     color: white;
-    font-size: medium;
+    font-size: 3.5vh;
   }
 
   #goHomeAfterPlayButton {
     position: absolute;
-    left: 130px;
-    top: 530px;
-    font-size: medium;
+    left: 32vw;
+    top: 79vh;
+    font-size: 3vh;
   }
   
   /* #StrikesBox {
@@ -147,131 +161,149 @@ body {
   } */
   
   .ChooseButton {
-    font-size: large;
-    height: 100px;
-    width: 100px;
+    font-size: 2.5vh;
+    height: 13vh;
+    width: 25vw;
   }
   
   #InputChoiceButton {
     position: absolute;
-    left: 100px;
-    top: 20px;
+    left: 23vw;
+    top: 3vh;
   }
 
   #PlayChoiceButton {
     position: absolute;
-    left: 220px;
-    top: 20px;
+    left: 51vw;
+    top: 3vh;
   }
   
   /* WordleInput components */
   #WordleInputComponent {
     position: absolute;
-    left: 10px;
+    left: 3vw;
     color: white;
-    font-size: large;
+    font-size: 2.5vh;
   }
   #inputBox {
     position: absolute;
-    left: -2px;
-    top: 85px;
-    font-size: large;
+    left: 0vw;
+    top: 12.5vh;
+    font-size: 2.5vh;
   }
   
   #inputSubmitButton {
     position: absolute;
-    left: 40px;
-    top: 130px;
-    font-size: large;
+    /* left: 40px; */
+    left: 10vw;
+    top: 18.5vh;
+    font-size: 2.5vh;
+    width: 24vw;
   }
   
   #inputPrompt {
     position: absolute;
-    left: 0px;
-    top: 45px;
-    width: 150px;
+    left: 0vw;
+    top: 6.8vh;
+    width: 35vw;
     color: white;
   }
   
   #inputSubmitAllButton {
     position: absolute;
-    left: 40px;
-    top: 190px;
-    font-size: large;
+    left: 10vw;
+    top: 26.5vh;
+    font-size: 2.5vh;
+    width: 24vw;
   }
 
   #pastGuessTable {
     position: absolute;
-    left: 230px;
-    width: 175px;
-    top: 60px;
-    font-size: large;
+    left: 55vw;
+    width: 40vw;
+    top: 10vh;
+    font-size: 2.5vh;
+    text-align: left;
     color: whitesmoke;
   }
   
   #enterGuessBox {
     position: absolute;
-    left: 0px;
-    width: 400px;
+    left: -1.5vw;
+    width: 80vw;
+    font-size: 2.5vh;
   }
 
   #goHomeInputButton {
     position: absolute;
-    left: 40px;
-    top: 250px;
-    width: 100px;
-    font-size: large;
+    left: 10vw;
+    top: 34.5vh;
+    width: 24vw;
+    font-size: 2.5vh;
   }
   
   #WordleLinkComponent {
-    font-size: x-large;
+    font-size: 4vh;
     color: white;
-    width: 300px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    left: 10px;
+    left: 0vw;
+  }
+
+  #RewordleCodeComponent {
+    font-size: 4vh;
+    color: white;
+    text-align: left;
+    position: absolute;
+    left: 2vw;
+    width: 80vw;
+    word-wrap: break-word;
   }
 
   /* Might need work in future */
   #copyClipboardButton {
     position: absolute;
-    top: 130px;
-    font-size: medium;
+    font-size: 2.5vh;
+    left: 2vw;
+    top: 28vh;
   }
   
   #goToHomePageButton {
     position: absolute;
-    top: 180px;
-    font-size: medium;
+    top: 35vh;
+    left: 2vw;
+    font-size: 2.5vh;
   }
   /* Other stuff */
   #linkInputBox {
     position: absolute;
-    top: 70px;
-    left: 15px;
-    width: 250px;
-    font-size: x-large;
+    top: 10vh;
+    left: 3.5vw;
+    width: 64vw;
+    font-size: 3.35vh;
   }
   
   #linkInputText {
     position: absolute;
-    left: 20px;
-    font-size: x-large;
+    left: 4.5vw;
+    /* font-size: x-large; */
+    font-size: 3.35vh;
     color: white;
   }
   
   #openLinkButton {
     position: absolute;
-    font-size: x-large;
-    left: 310px;
-    top: 70px;
+    font-size: 3.35vh;
+    left: 75.25vw;
+    top: 10vh;
   }
   
   #otherGoHomeButton {
     position: absolute;
-    top: 180px;
-    left: 100px;
-    font-size: x-large;
+    top: 20vh;
+    left: 25vw;
+    font-size: 3.35vh;
   }
 }
 
