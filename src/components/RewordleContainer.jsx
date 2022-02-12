@@ -1,7 +1,6 @@
 import React from 'react';
 import WordleGrid from './WordleGrid';
 import GuessBox from './GuessBox';
-import RowSelector from './RowSelector';
 import CompletedBox from './CompletedBox';
 
 class RewordleContainer extends React.Component {
@@ -30,6 +29,7 @@ class RewordleContainer extends React.Component {
 
     updateGuessRow(row) {
         this.setState({plsrender: true, guessRow: row});
+        console.log("updating RC.guessRow to: " + row);
     }
 
     checkComplete() {
@@ -48,24 +48,21 @@ class RewordleContainer extends React.Component {
     }
 
     render() {
-
         if (this.state.done === true) {
             let numStrikes = 0;
             for (let i = 0; i < this.game.guesses.length; i++) {
                 numStrikes += this.game.strikes[i];
             }
             return (<div id='RewordleContainer' >
-                <RowSelector id='RowSelect' validRows={ this.game.guesses.length } updateParent={ this.updateGuessRow } game={ this.game }/>
                 <GuessBox guessRow={ this.state.guessRow } game={ this.game } updateParent={ this.updateSelf }/>
-                <WordleGrid id='WordleGridComponent' game={ this.game }/>
+                <WordleGrid id='WordleGridComponent' game={ this.game } updateParent={ this.updateGuessRow }/>
                 <CompletedBox strikes={ numStrikes }/>
                 <button id='goHomeAfterPlayButton' onClick = { this.goHome }> Back to home </button>
             </div>);
         }
         return (<div id='RewordleContainer' >
-            <RowSelector id='RowSelect' validRows={ this.game.guesses.length } updateParent={ this.updateGuessRow } game={ this.game }/>
             <GuessBox guessRow={ this.state.guessRow } game={ this.game } updateParent={ this.updateSelf }/>
-            <WordleGrid id='WordleGridComponent' game={ this.game } />
+            <WordleGrid id='WordleGridComponent' game={ this.game } updateParent={ this.updateGuessRow } />
         </div>);
     }
 }

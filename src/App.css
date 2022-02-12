@@ -346,6 +346,14 @@ body {
     padding-left: 3px;
     color: white;
   }
+
+  .rowSelectButton {
+    width: 7vh;
+    height: 7vh;
+    font-size: 5vh;
+    padding-left: 3px;
+    color: white;
+  }
   
   #main-container {
     position: relative;
@@ -357,7 +365,7 @@ body {
   
   #GuessBox {
     position: absolute;
-    left: 59vw;
+    left: 59.3vw;
     top: -10vh;
     width: 15vw;
     font-size: xx-large;
@@ -388,22 +396,8 @@ body {
   #WordleGridTable {
     position: absolute;
     top: -10vh;
-    left: 41vw;
-  }
-  
-  .rowSelectButton {
-    width: 7vh;
-    height: 7vh;
-    font-size: xxx-large;
-    padding-left: 3px;
-    color: white;
-  }
-  
-  #RowSelector {
-    position: absolute;
-    left: 37vw;
-    top: -10vh;
-    color: white;
+    left: 38vw;
+    border-spacing: 0.15vh;
   }
   
   #CompletedBox {
@@ -483,6 +477,7 @@ body {
     left: 14vw;
     top: 12.5vh;
     font-size: x-large;
+    width: 9vw;
   }
 
   #inputSubmitAllButton {
@@ -490,6 +485,7 @@ body {
     left: 49.5vh;
     top: 12.5vh;
     font-size: x-large;
+    width: 10vw;
   }
   
   #inputPrompt {
@@ -506,6 +502,7 @@ body {
     left: 37vw;
     top: 7.5vh;
     font-size: large;
+    width: 10vw;
   }
   
   #enterGuessBox {
