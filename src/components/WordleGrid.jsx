@@ -70,6 +70,26 @@ class WordleGrid extends React.Component {
                 break;
             }
         }
+        candidateRow = Math.max(this.state.guessRow-1, 0);
+        console.log("Starting second loop");
+        while (true) {
+            let candComplete = true;
+            for (let j = 0; j < this.props.game.texts[candidateRow].length; j++) {
+                if (this.props.game.texts[candidateRow][j] === '') {
+                    candComplete = false;
+                    break;
+                }
+            }
+            if (candComplete === false) {
+                this.updateGuessRow(candidateRow);
+                break;
+            } else {
+                candidateRow++;
+            }
+            if (candidateRow > this.props.game.guesses.length) {
+                return;
+            }
+        }
     }
 
     render() {
@@ -109,6 +129,10 @@ class WordleGrid extends React.Component {
                     } else if (this.state.guessRow === i && rowDone === true) {
                         this.chooseNewRow();
                         continue;
+                    } else {
+                        button = <td>
+                            <InvisibleRow id={ button_id } className='rowSelectButton' disabled={ true } /> 
+                            </td>;
                     }
                     console.log(tileRow);
                     tileRow.push(button);
