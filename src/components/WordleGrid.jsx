@@ -28,6 +28,9 @@ class WordleGrid extends React.Component {
     }
 
     checkRowComplete(row) {
+        if (row >= this.props.game.guesses.length) {
+            return true;
+        }
         for (let i = 0; i < this.props.game.texts[row].length; i++) {
             if (this.props.game.texts[row][i] === '') {
                 return false;
@@ -81,7 +84,7 @@ class WordleGrid extends React.Component {
                     let rowDone = this.checkRowComplete(i);
                     let button_id = 'rowSelectButton_' + i;
                     // If the game is done always just render the strikes
-                    if (i === GRID_SIZE[0] - 1) {
+                    if (i >= this.props.game.guesses.length || i === GRID_SIZE[0] - 1) {
                         button = <td>
                             <InvisibleRow id={ button_id } className='rowSelectButton' disabled={ true } /> 
                             </td>;
