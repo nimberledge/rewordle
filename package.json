@@ -1,6 +1,7 @@
 {
   "name": "rewordle",
   "version": "0.1.0",
+  "homepage": "https://nimberledge.github.io/rewordle/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -10,11 +11,13 @@
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+	"predploy": "npm run build",
+	"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "react-router-dom": "^6.2.1"
   }
 }
