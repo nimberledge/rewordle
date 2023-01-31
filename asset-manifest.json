@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rewordle/static/css/main.7801cd88.css",
+    "main.js": "/rewordle/static/js/main.b96e50fb.js",
+    "static/js/787.a830b271.chunk.js": "/rewordle/static/js/787.a830b271.chunk.js",
+    "index.html": "/rewordle/index.html",
+    "main.7801cd88.css.map": "/rewordle/static/css/main.7801cd88.css.map",
+    "main.b96e50fb.js.map": "/rewordle/static/js/main.b96e50fb.js.map",
+    "787.a830b271.chunk.js.map": "/rewordle/static/js/787.a830b271.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7801cd88.css",
+    "static/js/main.b96e50fb.js"
+  ]
+}
